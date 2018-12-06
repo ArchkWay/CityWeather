@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<Button
+    android:id="@+id/btnClear"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:text="@string/delete_all"
+    />
+    <TextView
+        android:id="@+id/tvTitleNameCity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/etCityName"
+        android:text="@string/NameCity" />
+
+    <EditText
+        android:id="@+id/etCityName"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleNameCity"
+        app:layout_constraintBottom_toTopOf="@id/titleCitySize"
+        tools:ignore="LabelFor"
+        />
+
+    <TextView
+        android:id="@id/titleCitySize"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        android:text="@string/city_size"
+        app:layout_constraintTop_toBottomOf="@id/etCityName"
+        app:layout_constraintBottom_toTopOf="@id/clSizeChoose"
+        />
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clSizeChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/titleCitySize"
+        app:layout_constraintBottom_toTopOf="@id/titleTemp"
+        >
+
+        <Button
+            android:id="@+id/btnLittle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/little"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnMiddle"
+            />
+        <Button
+            android:id="@+id/btnMiddle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/middle"
+            app:layout_constraintStart_toEndOf="@id/btnLittle"
+            app:layout_constraintEnd_toStartOf="@id/btnBig"
+            />
+        <Button
+            android:id="@+id/btnBig"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/big"
+            app:layout_constraintStart_toEndOf="@id/btnMiddle"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/titleTemp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/temp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/clSizeChoose"
+        app:layout_constraintBottom_toTopOf="@id/tvDecember"/>
+
+    <TextView
+        android:id="@+id/tvDecember"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/dec"
+        app:layout_constraintEnd_toStartOf="@id/tvJanuary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTemp"
+        app:layout_constraintBottom_toTopOf="@id/etDec"/>
+
+    <TextView
+        android:id="@+id/tvJanuary"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/jan"
+        app:layout_constraintEnd_toStartOf="@id/tvFebruary"
+        app:layout_constraintStart_toEndOf="@+id/tvDecember"
+        app:layout_constraintTop_toBottomOf="@+id/titleTemp"
+        app:layout_constraintBottom_toTopOf="@id/etDec"
+        />
+
+    <TextView
+        android:id="@+id/tvFebruary"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/feb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvJanuary"
+        app:layout_constraintTop_toBottomOf="@+id/titleTemp"
+        app:layout_constraintBottom_toTopOf="@id/etDec"/>
+
+    <EditText
+        android:id="@+id/etDec"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toStartOf="@id/tvJanuary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDecember"
+        app:layout_constraintBottom_toTopOf="@id/tvMarch"
+        tools:ignore="LabelFor" />
+
+
+    <EditText
+        android:id="@+id/etJan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="numberDecimal|numberSigned"
+         app:layout_constraintEnd_toStartOf="@id/tvFebruary"
+        app:layout_constraintStart_toEndOf="@+id/tvDecember"
+        app:layout_constraintTop_toBottomOf="@id/tvDecember"
+        app:layout_constraintBottom_toTopOf="@id/tvMarch"
+        tools:ignore="LabelFor" />
+
+
+    <EditText
+        android:id="@+id/etFeb"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvJanuary"
+        app:layout_constraintTop_toBottomOf="@id/tvDecember"
+        app:layout_constraintBottom_toTopOf="@id/tvMarch"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/tvMarch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/march"
+        app:layout_constraintEnd_toStartOf="@id/tvJanuary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etDec"
+        app:layout_constraintBottom_toTopOf="@id/etMar"
+        />
+
+    <TextView
+        android:id="@+id/tvApril"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/april"
+        app:layout_constraintEnd_toStartOf="@id/tvFebruary"
+        app:layout_constraintStart_toEndOf="@+id/tvDecember"
+        app:layout_constraintTop_toBottomOf="@+id/etJan"
+        app:layout_constraintBottom_toTopOf="@id/etMar"/>
+
+    <TextView
+        android:id="@+id/tvMay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/may"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvJanuary"
+        app:layout_constraintTop_toBottomOf="@+id/etJan"
+        app:layout_constraintBottom_toTopOf="@id/etMar"/>
+
+    <EditText
+        android:id="@+id/etMar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toStartOf="@id/tvJanuary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMarch"
+        app:layout_constraintBottom_toTopOf="@id/tvJune"
+        tools:ignore="LabelFor" />
+
+
+    <EditText
+        android:id="@+id/etApr"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toStartOf="@id/tvFebruary"
+        app:layout_constraintStart_toEndOf="@+id/tvDecember"
+        app:layout_constraintTop_toBottomOf="@id/tvMarch"
+        app:layout_constraintBottom_toTopOf="@id/tvJune"
+        tools:ignore="LabelFor" />
+
+
+    <EditText
+        android:id="@+id/etMay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvJanuary"
+        app:layout_constraintTop_toBottomOf="@id/tvMarch"
+        app:layout_constraintBottom_toTopOf="@id/tvJune"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/tvJune"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/june"
+        app:layout_constraintEnd_toStartOf="@id/tvJanuary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etMar"
+        app:layout_constraintBottom_toTopOf="@id/etJun"
+        />
+
+    <TextView
+        android:id="@+id/tvJule"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/july"
+        app:layout_constraintEnd_toStartOf="@id/tvFebruary"
+        app:layout_constraintStart_toEndOf="@+id/tvDecember"
+        app:layout_constraintTop_toBottomOf="@+id/etMar"
+        app:layout_constraintBottom_toTopOf="@id/etJun"/>
+
+    <TextView
+        android:id="@+id/tvAugust"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/august"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvJanuary"
+        app:layout_constraintTop_toBottomOf="@+id/etMar"
+        app:layout_constraintBottom_toTopOf="@id/etJun"/>
+
+    <EditText
+        android:id="@+id/etJun"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toStartOf="@id/tvJanuary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvJune"
+        app:layout_constraintBottom_toTopOf="@id/tvSeptember"
+        tools:ignore="LabelFor" />
+
+
+    <EditText
+        android:id="@+id/etJul"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toStartOf="@id/tvFebruary"
+        app:layout_constraintStart_toEndOf="@+id/tvDecember"
+        app:layout_constraintTop_toBottomOf="@id/tvJune"
+        app:layout_constraintBottom_toTopOf="@id/tvSeptember"
+        tools:ignore="LabelFor" />
+
+
+    <EditText
+        android:id="@+id/etAug"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvJanuary"
+        app:layout_constraintTop_toBottomOf="@id/tvJune"
+        app:layout_constraintBottom_toTopOf="@id/tvSeptember"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/tvSeptember"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/september"
+        app:layout_constraintEnd_toStartOf="@id/tvJanuary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etJun"
+        app:layout_constraintBottom_toTopOf="@id/etSep"
+        />
+
+    <TextView
+        android:id="@+id/tvOctober"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/october"
+        app:layout_constraintEnd_toStartOf="@id/tvFebruary"
+        app:layout_constraintStart_toEndOf="@+id/tvDecember"
+        app:layout_constraintTop_toBottomOf="@+id/etJun"
+        app:layout_constraintBottom_toTopOf="@id/etSep"/>
+
+    <TextView
+        android:id="@+id/tvNovember"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/november"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvJanuary"
+        app:layout_constraintTop_toBottomOf="@+id/etJun"
+        app:layout_constraintBottom_toTopOf="@id/etSep"/>
+
+    <EditText
+        android:id="@+id/etSep"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toStartOf="@id/tvJanuary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSeptember"
+        app:layout_constraintBottom_toTopOf="@id/btnAddCity"
+        tools:ignore="LabelFor" />
+
+
+    <EditText
+        android:id="@+id/etOct"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toStartOf="@id/tvFebruary"
+        app:layout_constraintStart_toEndOf="@+id/tvDecember"
+        app:layout_constraintTop_toBottomOf="@id/tvSeptember"
+        app:layout_constraintBottom_toTopOf="@id/btnAddCity"
+        tools:ignore="LabelFor" />
+
+
+    <EditText
+        android:id="@+id/etNov"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvJanuary"
+        app:layout_constraintTop_toBottomOf="@id/tvSeptember"
+        app:layout_constraintBottom_toTopOf="@id/btnAddCity"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/btnAddCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_city"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</android.support.constraint.ConstraintLayout>

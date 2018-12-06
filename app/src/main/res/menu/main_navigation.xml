@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_cities"
+        android:title="@string/city"
+        android:icon="@drawable/ic_cities"
+        />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:title="@string/settings"
+        android:icon="@drawable/ic_settings"
+        />
+
+</menu>

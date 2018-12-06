@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">CitiesWeather</string>
+    <string name="winter">ЗИМА</string>
+    <string name="spring">ВЕСНА</string>
+    <string name="summer">ЛЕТО</string>
+    <string name="autumn">ОСЕНЬ</string>
+    <string name="giant">____</string>
+    <string name="exampleTemp">____с°</string>
+    <string name="exampleCityName">Rostov-on-Don</string>
+    <string name="city">Города</string>
+    <string name="settings">Настройки</string>
+    <string name="tvTitleTemp">Средняя температура:</string>
+    <string name="tvSizeCity">Размер города:</string>
+    <string name="add_city">ДОБАВИТЬ ГОРОД</string>
+    <string name="NameCity">Название города:</string>
+    <string name="temp">Температуры(вводить численные значения)</string>
+    <string name="dec">Декабрь:</string>
+    <string name="jan">Январь:</string>
+    <string name="feb">Февраль:</string>
+    <string name="march">Март:</string>
+    <string name="april">Апрель:</string>
+    <string name="may">Май:</string>
+    <string name="june">Июнь:</string>
+    <string name="july">Июль:</string>
+    <string name="august">Август:</string>
+    <string name="september">Сентябрь:</string>
+    <string name="october">Октябрь:</string>
+    <string name="november">Ноябрь:</string>
+    <string name="city_size">Размер города:</string>
+    <string name="little">Малый</string>
+    <string name="middle">Средний</string>
+    <string name="big">Большой</string>
+    <string name="city_weather">City Weather</string>
+    <string name="error">не все поля заполнены</string>
+    <string name="delete_all">удалить все</string>
+    <item name="titleCitySize" type="id">tvTitleCitySize</item>
+</resources>

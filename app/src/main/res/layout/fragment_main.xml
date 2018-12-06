@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:id="@+id/tvWinter"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/winter_back"
+        android:text="@string/winter"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/tvSpring"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSpring"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spring_back"
+        android:text="@string/spring"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/tvSummer"
+        app:layout_constraintStart_toEndOf="@id/tvWinter"
+        app:layout_constraintTop_toTopOf="@id/tvWinter" />
+
+    <TextView
+        android:id="@+id/tvSummer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/summer_back"
+        android:text="@string/summer"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/tvAutumn"
+        app:layout_constraintStart_toEndOf="@id/tvSpring"
+        app:layout_constraintTop_toTopOf="@id/tvWinter" />
+
+    <TextView
+        android:id="@+id/tvAutumn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/autumn_back"
+        android:text="@string/autumn"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvSummer"
+        app:layout_constraintTop_toTopOf="@id/tvWinter"
+        />
+    <TextView
+        android:id="@id/tvTitleTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvTitleTemp"
+        app:layout_constraintTop_toBottomOf="@id/tvWinter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvCitySize"
+        />
+
+    <TextView
+        android:id="@id/tvTitleSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvSizeCity"
+        app:layout_constraintTop_toBottomOf="@id/tvWinter"
+        app:layout_constraintStart_toEndOf="@id/tvCityTemp"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvCityTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exampleTemp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleTemp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvCitySize"
+        />
+
+    <TextView
+        android:id="@+id/tvCitySize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/giant"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleSize"
+        app:layout_constraintStart_toEndOf="@id/tvCityTemp"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvCities"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCityTemp"
+        android:layout_height="0dp"
+        />
+
+</android.support.constraint.ConstraintLayout>
